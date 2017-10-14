@@ -1,145 +1,264 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width">
     <link href="./tentcss/tent.min.css" rel="stylesheet">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://use.fontawesome.com/7fd52e76e2.js"></script>
     <title>Alien Spelling</title>
 
     <link rel="stylesheet" href="style.css">
+    <style>
+        .btn {
+            width: 3.5rem;
+        }
 
-  </head>
+        .answerbox {
+            height: 5rem;
+        }
+    </style>
+</head>
 
-  <body>
+<body>
 
-        <section class="masthero bg-color-lighter padding-y padding-lg">
-            <div class="container">
-                <div class="grid grid--justify-center">
-                    <div class="grid__column grid__column--8  flex-first--md">
-                        <div class="title-set">
-                             <p class="title title--xl type-center">Help Zory learn to spell.</p>
-                        </div>
+    <section class="masthero bg-color-lighter padding-y padding-lg">
+        <div class="container">
+            <div class="grid grid--justify-center">
+                <div class="grid__column grid__column--8  flex-first--md">
+                    <div class="title-set">
+                        <p class="title title--xl type-center">Help Zory learn to spell</p>
                     </div>
-                      <div class="grid__column grid__column--4 flex-last--md">
-                            <img class="type-center" width="100vw" src="./alien.png">
-                        </div>
+                </div>
+                <div class="grid__column grid__column--4 flex-last--md">
+                    <img class="type-center" width="100vw" src="./alien.png">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="mastcontent">
+        <section id="intro-btn" class="padding-y padding-lg">
+            <div class="container">
+                <div class="grid">
+
+                    <div class="grid__column grid__column--12">
+                        <a id="letsgo" class="button button--filled button--primary button--block">Let's go!</a>
+                    </div>
+
                 </div>
             </div>
         </section>
 
-        <main class="mastcontent">
-            <section class="intro-copy padding-y padding-lg">
-                <div class="container">
-                    <div class="grid">
-                                            
-                    <div class="grid__column grid__column--12 grid__column--6--md flex-last--md">        
-                      <button id="letsgo" class="button button--filled button--primary button--block" type="submit">Let's go!</button>
-                     </div>  
-
-               <!--         <div class="grid__column grid__column--12 grid__column--6--md flex-last--md">
-                                    <div class="card card--feature">
-                                     <h3 class="card__title title title--lg">Your answers</h3>
-                                      <div id='answers' class="card__content">
-
-                                      </div>
-                                </div>
+        <section id="answers-keyboard" class="intro-copy padding-lg" style="display:none;">
+            <div id="answers" class="container">
+                <div class="grid ">
+                    <div class="grid__column grid__column--4 grid__column--4--md flex-last--md">
+                        <div class="card">
+                            <div id="a0" class="card__content answerbox text-center">
+                                <p class="subtitle subtitle--lg"></p>
+                            </div>
                         </div>
-                        <div class="grid__column grid__column--12 grid__column--6--md flex-first--md">
-                            
-                            <form id="target">
-                              <input class="control__input" type="text" id="textinput" style="display:none;">
-                            </form>
+                    </div>
+                    <div class="grid__column grid__column--4 grid__column--4--md flex-last--md">
+                        <div class="card">
+                            <div id="a1" class="card__content answerbox text-center">
+                                <p class="subtitle subtitle--lg"></p>
+                            </div>
+                        </div>
+                    </div>
 
-
-                        </div>-->
+                    <div class="grid__column grid__column--4 grid__column--4--md flex-last--md">
+                        <div class="card">
+                            <div id="a2" class="card__content answerbox text-center">
+                                <p class="subtitle subtitle--lg"></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </section>
-            <section class="intro-copy padding-y padding-lg">
-                 <div class="container padding-y">
-                    <div class="grid padding-y">
-                     <div class="grid__column grid__column--12 grid__column--6--md flex-last--md"> 
-                     answer 1
-                     </div>   
-                      <div class="grid__column grid__column--12 grid__column--6--md flex-last--md"> 
-                      answer 2
-                     </div> 
-                    </div>
-                     <div class="grid padding-y">
-                     <div class="grid__column grid__column--12 grid__column--6--md flex-last--md"> 
-                     answer 1
-                     </div>   
-                      <div class="grid__column grid__column--12 grid__column--6--md flex-last--md"> 
-                      answer 2
-                     </div> 
-                    </div>
-                                         <div class="grid padding-y">
-                     <div class="grid__column grid__column--12 grid__column--6--md flex-last--md"> 
-                     answer 1
-                     </div>   
-                      <div class="grid__column grid__column--12 grid__column--6--md flex-last--md"> 
-                      answer 2
-                     </div> 
-                    </div>
-                 </div>
-            </section>
-            <section class="intro-copy padding-y padding-lg">
-                <div class="container">
-                    <div class="grid">
-                        <div class="grid__column grid__column--2"><a class="button button--outlined button--xxxs">q</a></div>
-                        <div class="grid__column grid__column--2"><a class="button button--outlined button--xxxs">w</a></div>
-                        <div class="grid__column grid__column--2"><p class="button button--outlined button--xxxs">e</p></div>
-                        <div class="grid__column grid__column--2"><p class="button button--outlined button--xxxs">r</p></div>
-                        <div class="grid__column grid__column--2"><p class="button button--outlined button--xxxs">t</p></div>
-                        <div class="grid__column grid__column--2"><p class="button button--outlined button--xxxs">y</p></div>
-                      </div>
-                        <div class="grid__column grid__column--1"><p class="button button--outlined button--xxxs">u</p></div>
-                        <div class="grid__column grid__column--1"><p class="button button--outlined button--xxxs">i</p></div>
-                        <div class="grid__column grid__column--1"><p class="button button--outlined button--xxxs">o</p></div>
-                        <div class="grid__column grid__column--1"><p class="button button--outlined button--xxxs">p</p></div>
-                    </div>
-                    <div class="grid">
-                        <div class="grid__column grid__column--1"><a class="button button--outlined button--xxxs">a</a></div>
-                        <div class="grid__column grid__column--1"><a class="button button--outlined button--xxxs">s</a></div>
-                        <div class="grid__column grid__column--1"><p class="button button--outlined button--xxxs">d</p></div>
-                        <div class="grid__column grid__column--1"><p class="button button--outlined button--xxxs">f</p></div>
-                        <div class="grid__column grid__column--1"><p class="button button--outlined button--xxxs">g</p></div>
-                        <div class="grid__column grid__column--1"><p class="button button--outlined button--xxxs">h</p></div>
-                        <div class="grid__column grid__column--1"><p class="button button--outlined button--xxxs">j</p></div>
-                        <div class="grid__column grid__column--1"><p class="button button--outlined button--xxxs">k</p></div>
-                        <div class="grid__column grid__column--1"><p class="button button--outlined button--xxxs">l</p></div>
-                    <!--    <div class="grid__column grid__column--1"><p class="button button--outlined button--xxxs">&nbsp;</p></div>-->
-                    </div>
-                    <div class="grid">
-                        <div class="grid__column grid__column--1"><a class="button button--outlined button--xxxs">z</a></div>
-                        <div class="grid__column grid__column--1"><a class="button button--outlined button--xxxs">x</a></div>
-                        <div class="grid__column grid__column--1"><p class="button button--outlined button--xxxs">c</p></div>
-                        <div class="grid__column grid__column--1"><p class="button button--outlined button--xxxs">v</p></div>
-                        <div class="grid__column grid__column--1"><p class="button button--outlined button--xxxs">b</p></div>
-                        <div class="grid__column grid__column--1"><p class="button button--outlined button--xxxs">n</p></div>
-                        <div class="grid__column grid__column--1"><p class="button button--outlined button--xxxs">m</p></div>
-                 <!--       <div class="grid__column grid__column--1"><p class="button button--outlined button--xxxs">&nbsp;</p></div>
-                        <div class="grid__column grid__column--1"><p class="button button--outlined button--xxxs">&nbsp;</p></div>
-                        <div class="grid__column grid__column--1"><p class="button button--outlined button--xxxs">&nbsp;</p></div>-->
-                    </div>  
-                    <div class="grid">
-                        <div class="grid__column grid__column--6">
-                          <button id="play" class="button button--filled button--primary"  style="display:none;">Listen again <i class="fa fa-volume-up" aria-hidden="true"></i></button>
+                <div class="grid ">
+                    <div class="grid__column grid__column--4 grid__column--4--md flex-last--md">
+                        <div class="card">
+                            <div id="a3" class="card__content answerbox text-center">
+                                <p class="subtitle subtitle--lg"></p>
+                            </div>
                         </div>
-                    </div>                  
+                    </div>
+
+                    <div class="grid__column grid__column--4 grid__column--4--md flex-last--md">
+                        <div class="card">
+                            <div id="a4" class="card__content answerbox text-center">
+                                <p class="subtitle subtitle--lg"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid__column grid__column--4 grid__column--4--md flex-last--md">
+                        <div class="card">
+                            <div id="a5" class="card__content answerbox text-center">
+                                <p class="subtitle subtitle--lg"></p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </section>
-        </main>
+                <div class="grid ">
+                    <div class="grid__column grid__column--4 grid__column--4--md flex-last--md">
+                        <div class="card">
+                            <div id="a6" class="card__content answerbox text-center">
+                                <p class="subtitle subtitle--lg"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid__column grid__column--4 grid__column--4--md flex-last--md">
+                        <div class="card">
+                            <div id="a7" class="card__content answerbox text-center">
+                                <p class="subtitle subtitle--lg"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid__column grid__column--4 grid__column--4--md flex-last--md">
+                        <div class="card">
+                            <div id="a8" class="card__content answerbox text-center">
+                                <p class="subtitle subtitle--lg"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    
-    
+            <div class="container">
+
+                <div id="next-play-buttons padding-sm" class="grid">
+                    <div class="grid__column grid__column--6">
+                        <button id="play" class="button button--filled button--block">Listen again
+                            <i class="fa fa-volume-up" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    <div class="grid__column grid__column--6">
+                        <button id="next" class="button button--filled button--block">Next...
+                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+
+                        </button>
+                    </div>
+                </div>
 
 
-   
-  </body>
+                <div class="grid grid.grid--justify-center">
+                    <div class="grid__column grid__column--2">
+                        <a class="button button--outlined button--xs btn">a</a>
+                    </div>
+                    <div class="grid__column grid__column--2">
+                        <a class="button button--outlined button--xs btn    ">b</a>
+                    </div>
+                    <div class="grid__column grid__column--2">
+                        <a class="button button--outlined button--xs btn">c</a>
+                    </div>
+                    <div class="grid__column grid__column--2">
+                        <a class="button button--outlined button--xs btn">d</a>
+                    </div>
+                    <div class="grid__column grid__column--2">
+                        <a class="button button--outlined button--xs btn">e</a>
+                    </div>
+                    <div class="grid__column grid__column--2">
+                        <a class="button button--outlined button--xs btn">f</a>
+                    </div>
+                </div>
+                <div class="grid grid--center ">
+                    <div class="grid__column grid__column--2">
+                        <a class="button button--outlined button--xs btn">g</a>
+                    </div>
+                    <div class="grid__column grid__column--2">
+                        <a class="button button--outlined button--xs btn">h</a>
+                    </div>
+                    <div class="grid__column grid__column--2">
+                        <a class="button button--outlined button--xs btn">i</a>
+                    </div>
+                    <div class="grid__column grid__column--2">
+                        <a class="button button--outlined button--xs btn">j</a>
+                    </div>
+                    <div class="grid__column grid__column--2">
+                        <a class="button button--outlined button--xs btn">k</a>
+                    </div>
+                    <div class="grid__column grid__column--2">
+                        <a class="button button--outlined button--xs btn">l</a>
+                    </div>
+                </div>
+                <div class="grid">
+                    <div class="grid__column grid__column--2">
+                        <a class="button button--outlined button--xs btn">m</a>
+                    </div>
+                    <div class="grid__column grid__column--2">
+                        <a class="button button--outlined button--xs btn">n</a>
+                    </div>
+                    <div class="grid__column grid__column--2">
+                        <a class="button button--outlined button--xs btn">o</a>
+                    </div>
+                    <div class="grid__column grid__column--2">
+                        <a class="button button--outlined button--xs btn">p</a>
+                    </div>
+                    <div class="grid__column grid__column--2">
+                        <a class="button button--outlined button--xs btn">q</a>
+                    </div>
+                    <div class="grid__column grid__column--2">
+                        <a class="button button--outlined button--xs btn">r</a>
+                    </div>
+                </div>
+                <div class="grid">
+                    <div class="grid__column grid__column--2">
+                        <a class="button button--outlined button--xs btn">s</a>
+                    </div>
+                    <div class="grid__column grid__column--2">
+                        <a class="button button--outlined button--xs btn">t</a>
+                    </div>
+                    <div class="grid__column grid__column--2">
+                        <a class="button button--outlined button--xs btn">u</a>
+                    </div>
+                    <div class="grid__column grid__column--2">
+                        <a class="button button--outlined button--xs btn">w</a>
+                    </div>
+                    <div class="grid__column grid__column--2">
+                        <a class="button button--outlined button--xs btn">x</a>
+                    </div>
+                    <div class="grid__column grid__column--2">
+                        <a class="button button--outlined button--xs btn">y</a>
+                    </div>
+                </div>
+                <div class="grid">
+                    <div class="grid__column grid__column--2">
+                        <a class="button button--outlined button--xs btn">z</a>
+                    </div>
+                    <!--    <div class="grid__column grid__column--2">
+                        <a class="button button--outlined button--xs btn"> </a>
+                    </div>-->
+                    <div class="grid__column grid__column--2">
+                        <a id="del" class="button button--filled button--xs btn">
+                            <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    <!--   <div class="grid__column grid__column--2">
+                        <a class="button button--outlined button--xs btn"> </a>
+                    </div>
+                    <div class="grid__column grid__column--2">
+                        <a class="button button--outlined button--xs btn"> </a>
+                    </div>
+                    <div class="grid__column grid__column--2">
+                        <a class="button button--outlined button--xs btn"> </a>
+                    </div>-->
+                </div>
+            </div>
+
+
+            </div>
+        </section>
+    </main>
+
+
+
+
+
+
+</body>
 
 <script src="script.js"></script>
 <script>
@@ -147,57 +266,86 @@
 
 
 
-$(function(){
-      var currentQuestionId=0;
-    var questions=[];
+    $(function () {
+        var currentQuestionId = 0;
+        var questions = [];
 
- 
-    var words=['this','and','hello'].sort(function(a, b){return 0.5 - Math.random()});
 
-    words.forEach(function(element,index){
-      questions.push( { id: index, word: element , answer : ""} );
+        var words = ['but', 'did', 'got', 'had', 'him', 'ran', 'that', 'with', 'his'].sort(function (a, b) { return 0.5 - Math.random() });
+
+        words.forEach(function (element, index) {
+            questions.push({ id: index, word: element, answer: "" });
+        });
+
+        populateVoiceList();
+
+        $('#next').click(function (e) {
+            questions[currentQuestionId].answer = $('#a' + currentQuestionId).text().trim();
+            currentQuestionId++;
+
+            if (currentQuestionId == questions.length) {
+                speak({ value: 'Lets see how many you got right' });
+                //loop over the questions
+                questions.forEach(function (element, index) {
+                    console.log(element)
+                    if (element.answer.toLowerCase() === element.word) {
+                        $('#a' + index).addClass('bg-color-secondary').addClass('color-light');
+                    } else {
+                        $('#a' + index).addClass('bg-color-tertiary').addClass('color-light');
+                    }
+                })
+            } else {
+
+                $('#play').click();
+            }
+        });
+
+        $('#target').submit(function (event) {
+            var a = $('#textinput').val();
+            questions[currentQuestionId].answer = a;
+            $('#answers').append("<p id=\"q" + currentQuestionId + "\" >" + questions[currentQuestionId].answer + '</p>');
+
+            event.preventDefault();
+
+            $('#textinput').val('');
+            currentQuestionId++;
+            if (currentQuestionId == questions.length) {
+                speak({ value: 'Lets see how many you got right' });
+                //loop over the questions
+                questions.forEach(function (element, index) {
+                    if (element.answer.toLowerCase() === element.word) {
+                        $('#a' + index).addClass('bg-color-secondary').addClass('color-light');
+                    } else {
+                        $('#a' + index).addClass('bg-color-tertiary').addClass('color-light');
+                    }
+                })
+            } else {
+
+                $('#play').click();
+            }
+        });
+
+        $('#letsgo').click(function () {
+            $('#intro-btn').fadeOut(1000, function () {
+                $('#answers-keyboard').fadeIn(1000);
+                $('#play').click();
+            });
+
+        })
+
+        $('#play').click(function () {
+            speak({ value: 'how do you spell, ' + questions[currentQuestionId].word });
+        });
+
+        $('.btn').click(function (b) {
+            $('#a' + currentQuestionId + ' > p').append(b.target.text)
+        })
+        $("#del").on("click", function () {
+            $('#a' + currentQuestionId + ' > p').text(function (index, text) {
+                return text.replace(/(\s+)?.$/, '');
+            });
+        });
     });
-
-    populateVoiceList();
-
-    $('#target').submit(function( event ) {
-      var a = $('#textinput').val();     
-      questions[currentQuestionId].answer=a;
-      $('#answers').append("<p id=\"q"+currentQuestionId+"\" >" + questions[currentQuestionId].answer+'</p>');
-      
-      event.preventDefault();
-
-      $('#textinput').val('');
-      currentQuestionId++;
-     if (currentQuestionId==questions.length){
-       speak({value:'Lets see how many you got right'});
-       //loop over the questions
-       questions.forEach(function(element,index){
-         if (element.answer.toLowerCase() === element.word){
-           $('#q'+index).addClass('bg-color-secondary').addClass('color-light');
-         } else {
-           $('#q'+index).addClass('bg-color-tertiary').addClass('color-light');
-         }
-       })
-     }else {
-        
-        $('#play').click();
-     }
-    });
-
-   $('#letsgo').click(function(){
-      $('#letsgo').hide();
-      $('#textinput').show();
-      $('#play').show();
-      $('#play').click();
-   })
-
-   $('#play').click(function(){
-        speak({value:'how do you spell, '+questions[currentQuestionId].word});
-   });
-
-
-});
 </script>
 
 </html>
